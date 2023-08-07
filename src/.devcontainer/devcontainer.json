@@ -1,0 +1,22 @@
+{
+    "name": "Decentraland Devcontainer",
+    "dockerFile": "Dockerfile",
+    "settings": { 
+        // Use bash as the integrated terminal shell
+        // "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        // Install helpful extensions for JavaScript and Ethereum development
+        "dbaeumer.vscode-eslint", // Provides linting for JavaScript
+        "ms-vscode.vscode-typescript-tslint-plugin", // Provides linting for TypeScript
+        "editorconfig.editorconfig", // Helps maintain consistent coding styles
+        "esbenp.prettier-vscode" // Code formatter
+    ],
+    "forwardPorts": [
+        // Forward these ports from the container to the host. This is necessary if your application needs to be accessed via a specific port.
+        8000, 
+        8500
+    ],
+    // Command run after the container is created. In this case, it runs npm install to install the dependencies for the project.
+    "postCreateCommand": "npm install"
+}
