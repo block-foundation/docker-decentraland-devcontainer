@@ -9,7 +9,6 @@
 
 </div>
 
-
 ---
 
 <div>
@@ -43,7 +42,54 @@
 
 ## Introduction
 
-...
+This development container is built specifically for Decentraland development. It provides a pre-configured environment with Node.js, the Decentraland SDK, and essential Ethereum development tools, making it easier to get started with creating experiences in Decentraland.
+
+## Features
+
+- **Node.js**: The base for running and building projects.
+- **Decentraland SDK**: Enables creating scenes and experiences for the Decentraland platform.
+- **Ethereum Tools**: Includes `truffle` for smart contract development and `ganache-cli` for simulating an Ethereum blockchain.
+
+## Getting Started
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/products/docker-desktop) installed and running.
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed.
+
+### Steps
+
+1. Clone this repository:
+
+   ``` sh
+   git clone <repository-url>
+   ```
+
+2. Open the project in VS Code.
+
+   ``` sh
+   code <repository-path>
+   ```
+
+3. Once in VS Code, open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS) and select the `Remote-Containers: Open Folder in Container` option. Choose the repository's root directory.
+
+4. The container will build based on the provided `Dockerfile` and launch. It might take a few minutes the first time as it downloads and configures the environment.
+
+5. Once the container is running, you're all set! You can start developing within a consistent environment configured for Decentraland development.
+
+## Forwarded Ports
+
+- `8000`: You might use this for local development servers.
+- `8500`: Another port you might use for local development.
+
+## Extensions Included
+
+- ESLint: For linting JavaScript code.
+- TSLint: For linting TypeScript code.
+- EditorConfig: Helps maintain consistent coding styles.
+- Prettier: Code formatter.
+
+Remember, the specifics provided here are based on the earlier `Dockerfile` and `devcontainer.json` examples. You might need to adjust content based on your actual configuration or additional features you include.
 
 ---
 
